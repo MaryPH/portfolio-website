@@ -1,0 +1,75 @@
+/* -- General colors
+Primary: #333333;
+Secondary: #374e5c;
+Headlines: #628b9f;
+-- */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+h1 {font-family: 'Playfair Display', sans-serif; font-size: 30px; color: #628b9f;}
+h2 {font-family: 'Playfair Display', sans-serif; font-size: 24px; color: #628b9f;}
+h3 {font-family: 'Playfair Display', sans-serif; font-size: 18px; color: #628b9f;}
+
+div {
+  padding: 5px;
+  margin: 5px;
+}
+
+/* -- Link styles + colors
+ Link Blue: #55b9f2;
+ -- */
+
+a {
+  color: #55b9f2;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #55b9f2;
+}
+
+a:active {
+  color: #55b9f2;
+}
+
+/* -- Button styles + colors
+ Primary green: #628b9f;
+ Shadow: #374e5c;
+ Secondary grey: #eeeeef;
+ Secondary shadow: #c1dce5;
+ --*/
+
+button {
+  /* brower override */
+  border: none;
+  font-family: inherit;
+  font-size: 14px;
+  /* style button */
+  color: white;
+  text-decoration: none;
+  background-color: #628b9f;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #374e5c;
+  transition: .2s opacity;
+}
+
+button:hover, button:focus {
+  opacity: .7;
+  cursor: pointer;
+}
+
+.button-secondary {
+  background-color: #eeeeef;
+  color: #374e5c;
+  border-bottom: 2px solid #c1dce5;
+}

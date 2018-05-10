@@ -1,42 +1,42 @@
-/* -- General colors
+/* -- General styles & colors
 Primary: #333333;
 Secondary: #374e5c;
 Headlines: #628b9f;
 -- */
-
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   line-height: 1.6;
   color: #333333;
 }
-
-h1 {font-family: 'Playfair Display', sans-serif; font-size: 30px; color: #628b9f;}
-h2 {font-family: 'Playfair Display', sans-serif; font-size: 24px; color: #628b9f;}
-h3 {font-family: 'Playfair Display', sans-serif; font-size: 18px; color: #628b9f;}
-
-div {
-  padding: 5px;
-  margin: 5px;
+h1, h2, h3 {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 300;
+  color: #628b9f;
+}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 18px;
 }
 
 /* -- Link styles + colors
  Link Blue: #55b9f2;
  -- */
-
 a {
   color: #55b9f2;
   text-decoration: none;
 }
-
-a:hover, a:focus {
-  text-decoration: none;
-}
-
 a:visited {
   color: #55b9f2;
 }
-
+a:hover, a:focus {
+  text-decoration: none;
+}
 a:active {
   color: #55b9f2;
 }
@@ -47,7 +47,6 @@ a:active {
  Secondary grey: #eeeeef;
  Secondary shadow: #c1dce5;
  --*/
-
 button {
   /* brower override */
   border: none;
@@ -59,17 +58,83 @@ button {
   background-color: #628b9f;
   padding: 10px;
   border-radius: 3px;
-  border-bottom: 2px solid #374e5c;
-  transition: .2s opacity;
+  border-bottom: 2px solid #374e5c; /* gives the drop-shadow look */
+  transition: .2s opacity; /* gives the drop-shadow look */
 }
-
 button:hover, button:focus {
   opacity: .7;
   cursor: pointer;
 }
-
 .button-secondary {
   background-color: #eeeeef;
   color: #374e5c;
   border-bottom: 2px solid #c1dce5;
+}
+
+/* -- Images -- */
+img {
+  max-width: 100%;
+}
+
+/* -- Layout styling --
+background color when looking at alignment only - #eefaff */
+.wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto; /* no space on top & bottom, centered left & right */
+}
+.columns-container {
+  width: 100%;
+  font-size: 0;
+}
+.column-4 {
+  font-size: 15px;
+  text-align: center;
+  width: 24%;
+  display: inline-block;
+  margin-right: 1%;
+}
+.column-4: last-child {
+  margin-right: 0;
+}
+.column-2 {
+  font-size: 15px;
+  width: 49%;
+  display: inline-block;
+  margin-right: 1%;
+  margin-bottom: 15px;
+  align-items: flex-start;
+}
+
+/* -- Navigation -- */
+.navigation {
+  list-style-type: none;
+  padding: 0;
+  float: right;
+}
+.navigation > li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+/* -- Media queries --*/
+@media all and (max-width: 500px) {
+  .logo {
+    /* make logo smaller */
+    height: 50px;
+  }
+  h1 {
+    /* reduce font-size of heading */
+    font-size: 24px;
+    text-align: left;
+  }
+  .column-4 {
+    /* change 4 columns to 2 columns */
+    width: 49%;
+    margin-right: 1%
+  }
+  .column-2 {
+    /* change 2 columns to 1 column */
+    width: 100%;
+  }
 }

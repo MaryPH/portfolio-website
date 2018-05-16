@@ -47,7 +47,7 @@ a:active {
  Secondary grey: #eeeeef;
  Secondary shadow: #c1dce5;
  --*/
-button {
+button, .button {
   /* brower override */
   border: none;
   font-family: inherit;
@@ -59,9 +59,12 @@ button {
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid #374e5c; /* gives the drop-shadow look */
-  transition: .2s opacity; /* gives the drop-shadow look */
+  transition-duration: .3s; /* controls the transition time */
+  transition-property: opacity; /* contols the transition property */
 }
-button:hover, button:focus {
+
+button:hover, .button:hover,
+button:focus, .button:focus {
   opacity: .7;
   cursor: pointer;
 }
@@ -80,8 +83,9 @@ img {
 background color when looking at alignment only - #eefaff */
 .wrapper {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1024px;
   margin: 0 auto; /* no space on top & bottom, centered left & right */
+  padding: 0 10px; /* CAUSES SCALE ISSUES - look into further - no space on top & bottom, 10px on left & right */
 }
 .columns-container {
   width: 100%;
@@ -90,18 +94,18 @@ background color when looking at alignment only - #eefaff */
 .column-4 {
   font-size: 15px;
   text-align: center;
-  width: 24%;
+  width: 20%;
   display: inline-block;
-  margin-right: 1%;
+  margin-right: 5%;
 }
 .column-4: last-child {
   margin-right: 0;
 }
 .column-2 {
   font-size: 15px;
-  width: 49%;
+  width: 45%;
   display: inline-block;
-  margin-right: 1%;
+  margin-right: 5%;
   margin-bottom: 15px;
   align-items: flex-start;
 }
@@ -137,4 +141,21 @@ background color when looking at alignment only - #eefaff */
     /* change 2 columns to 1 column */
     width: 100%;
   }
+}
+
+/* -- Keyframe queries -- */
+@keyframes color-change {
+    0% {fill: #edc655;}
+    50% {fill: #fcffad;}
+    100% {fill: #f76414;}
+}
+@keyframes cloud-move {
+    from {transform: translate(0,50px);}
+    to {transform: translate(200px,50px);}
+}
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
 }

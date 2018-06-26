@@ -1,11 +1,11 @@
 /* -- General styles & colors
 Primary: #333333;
 Secondary: #374e5c;
-Headlines: #628b9f;
+Headlines: #4F7182;
 -- */
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.6;
   color: #333;
 }
@@ -15,7 +15,7 @@ h2,
 h3 {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 300;
-  color: #628b9f;
+  color: #4F7182;
 }
 
 h1 {
@@ -37,34 +37,37 @@ p {
 }
 
 /* -- Link styles + colors
- Link Blue: #55b9f2;
+ Link Blue: #0D72AC;
  -- */
 a {
-  color: #55b9f2;
+  color: #0d72ac;
   text-decoration: none;
 }
 
 a:visited {
-  color: #55b9f2;
+  color: #0d72ac;
 }
 
-a:hover, a:focus {
-  text-decoration: none;
+a:hover,
+a:focus {
+  text-decoration: underline;
 }
 
 a:active {
-  color: #55b9f2;
+  color: #0d72ac;
 }
 
 /* -- Button styles + colors
- Primary green: #628b9f;
+ Primary blue: #4F7182;
  Shadow: #374e5c;
  Secondary grey: #eeeeef;
  Secondary shadow: #c1dce5;
  -- */
 
 button,
-.button {
+.button,
+button:visited,
+.button:visited {
   /* brower override */
   border: none;
   font-family: inherit;
@@ -73,7 +76,7 @@ button,
   /* style button */
   color: white;
   text-decoration: none;
-  background-color: #628b9f;
+  background-color: #4F7182;
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid #374e5c; /* gives the drop-shadow look */
@@ -87,6 +90,7 @@ button:focus,
 .button:focus {
   opacity: 0.7;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .button-secondary {
@@ -106,7 +110,7 @@ background color when looking at alignment only - #eefaff */
   width: 100%;
   max-width: 1280px;
   margin: 0 auto; /* no space on top & bottom, centered left & right */
-  padding: 0 20px; /* PROBLEM W/ CROPPING ON THE RIGHT no space on top & bottom, centered left & right */
+  padding: 0 20px;
 }
 
 .columns-container {
@@ -117,20 +121,16 @@ background color when looking at alignment only - #eefaff */
 .column-3,
 .column-2,
 .column-1 {
-  font-size: 15px;
+  font-size: 14px;
   text-align: left;
   display: inline-block;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   vertical-align: top;
 }
 
 .column-4 {
   width: 24%;
   margin-right: 1%;
-}
-
-.column-3:last-child {
-  margin-right: 0;
 }
 
 .column-3 {
@@ -160,26 +160,32 @@ background color when looking at alignment only - #eefaff */
 }
 
 .img-text {
-  font-size: 15px;
+  font-size: 14px;
   text-align: center;
 }
 
 .img-description {
-  font-size: 13px;
+  font-size: 12px;
+  color: #6c6c6c;
   font-style: italic;
   text-align: left;
+}
+
+.hr {
+  color: #ddd;
+  size: 1px;
 }
 
 /* -- Navigation -- */
 .navigation {
   list-style-type: none;
-  padding: 0;
+  padding-right: 30px;
   float: right;
 }
 
 .navigation > li {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 /* -- Footer -- */
